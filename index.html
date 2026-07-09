@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaik Haseena | Portfolio</title>
+<meta name="description" content="Shaik Haseena — Electronics & Communication Engineering student, AI/IoT enthusiast and full stack developer.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-glow bg-glow--one"></div>
+<div class="bg-glow bg-glow--two"></div>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="#home" class="brand">
+      <span class="brand__logo">HS</span>
+      <span class="brand__name">Haseena</span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#home" class="nav__link active">Home</a>
+      <a href="#about" class="nav__link">About</a>
+      <a href="#education" class="nav__link">Education</a>
+      <a href="#skills" class="nav__link">Skills</a>
+      <a href="#projects" class="nav__link">Projects</a>
+      <a href="#services" class="nav__link">Services</a>
+      <a href="#achievements" class="nav__link">Achievements</a>
+      <a href="#contact" class="nav__link">Contact</a>
+    </nav>
+
+    <a href="#contact" class="btn btn--primary btn--pill navbar__cta">Let's Talk <span class="arrow">&rarr;</span></a>
+
+    <button class="navbar__burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="container hero__inner">
+
+    <div class="hero__content reveal">
+      <span class="badge"><span class="dot dot--pulse"></span>Available for Internships &amp; Collaborations</span>
+
+      <h1 class="hero__title">
+        Hello, I'm<br>
+        <span class="gradient-text">Shaik Haseena</span>
+      </h1>
+
+      <p class="hero__role">I build as a <span id="typewriter" class="typewriter"></span><span class="cursor">|</span></p>
+
+      <p class="hero__desc">
+        Electronics and Communication Engineering student passionate about AI, IoT, Embedded Systems,
+        Programming, and emerging technologies. Continuously learning, building projects, and exploring
+        innovative solutions for real-world challenges.
+      </p>
+
+      <div class="hero__actions">
+        <a href="assets/resume/resume.pdf" class="action-btn" download>
+          <span class="action-btn__icon" aria-hidden="true">&#8595;</span>
+          <span>Resume</span>
+        </a>
+        <a href="#projects" class="action-btn">
+          <span class="action-btn__icon" aria-hidden="true">&#128640;</span>
+          <span>Projects</span>
+        </a>
+        <a href="#contact" class="action-btn">
+          <span class="action-btn__icon" aria-hidden="true">&#9993;</span>
+          <span>Contact</span>
+        </a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat-card">
+          <span class="stat-card__value">2+</span>
+          <span class="stat-card__label">Projects Completed</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__value">ECE</span>
+          <span class="stat-card__label">Student</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__value">9.95</span>
+          <span class="stat-card__label">CGPA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__visual reveal">
+      <span class="find-me">Find me on</span>
+      <div class="social-row">
+        <a href="https://github.com/shaikhaseena91542-pixel" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">&#x1F5A5;</a>
+        <a href="https://linkedin.com/in/haseena-shaik-a554093b8" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">in</a>
+        <a href="mailto:shaikhaseena91542@gmail.com" class="social-icon" aria-label="Email">&#9993;</a>
+      </div>
+
+      <div class="photo-ring">
+        <div class="photo-ring__badge photo-ring__badge--current">
+          <span class="tiny-label">Currently</span>
+          <strong>EchoGuar AI</strong>
+        </div>
+
+        <div class="photo-frame">
+          <img src="assets/images/profile.jpg" alt="Shaik Haseena" class="photo-frame__img" onerror="this.style.display='none'; this.parentElement.classList.add('photo-frame--placeholder')">
+        </div>
+
+        <div class="photo-ring__badge photo-ring__badge--focus">
+          <span class="tiny-label">Focus</span>
+          <ul>
+            <li>AI</li>
+            <li>Web Applications</li>
+            <li>Full Stack Developer</li>
+          </ul>
+        </div>
+
+        <span class="photo-ring__tag">
+          <span class="dot dot--live"></span> 2nd Year ECE Student
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">[01] About Me</span>
+      <h2 class="section__title">Dream big. Build smart. <span class="gradient-text">Innovate always.</span></h2>
+    </div>
+
+    <div class="about__grid">
+      <div class="about__text reveal">
+        <p>
+          I am <strong>Shaik Haseena</strong>, a 2nd Year B.Tech Electronics and Communication Engineering
+          student at Vel Tech University, Chennai.
+        </p>
+        <p>
+          I am passionate about <span class="link-text">Artificial Intelligence</span>,
+          <span class="link-text">Internet of Things (IoT)</span>, <span class="link-text">Embedded Systems</span>,
+          and <span class="link-text">VLSI Design</span>. I enjoy learning new technologies, building
+          innovative projects, and applying engineering concepts to solve real-world problems.
+        </p>
+        <p>
+          As an aspiring electronics engineer, I continuously explore emerging technologies and work on
+          projects that strengthen my technical, analytical, and problem-solving skills.
+        </p>
+
+        <div class="about__points">
+          <div class="point-card reveal">
+            <span class="point-card__icon">&#128640;</span>
+            <span>Build Real-World IoT Solutions</span>
+          </div>
+          <div class="point-card reveal">
+            <span class="point-card__icon">&#129302;</span>
+            <span>Explore AI &amp; Embedded Systems</span>
+          </div>
+          <div class="point-card reveal">
+            <span class="point-card__icon">&#128225;</span>
+            <span>Learn VLSI &amp; Communication Technologies</span>
+          </div>
+          <div class="point-card reveal">
+            <span class="point-card__icon">&#128218;</span>
+            <span>Continuously Improve Technical Skills</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__info reveal">
+        <div class="info-row">
+          <span class="info-row__icon">&#127891;</span>
+          <div>
+            <span class="tiny-label">Degree</span>
+            <strong>B.Tech Electronics &amp; Communication Engineering</strong>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="info-row__icon">&#127970;</span>
+          <div>
+            <span class="tiny-label">University</span>
+            <strong>Vel Tech University, Chennai</strong>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="info-row__icon">&#127942;</span>
+          <div>
+            <span class="tiny-label">CGPA</span>
+            <strong>9.95</strong>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="info-row__icon">&#128100;</span>
+          <div>
+            <span class="tiny-label">Role</span>
+            <strong>2nd Year ECE Student</strong>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="info-row__icon">&#127919;</span>
+          <div>
+            <span class="tiny-label">Focus</span>
+            <strong>AI &middot; Web Applications &middot; Full Stack Developer</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EDUCATION ===== -->
+<section class="section" id="education">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">[02] Education</span>
+      <h2 class="section__title">Academic <span class="gradient-text">Journey</span></h2>
+      <p class="section__subtitle">Building a Strong Foundation in Electronics, Communication &amp; Emerging Technologies</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline__line" aria-hidden="true"></div>
+
+      <div class="timeline__item timeline__item--left reveal">
+        <div class="timeline__dot"></div>
+        <div class="timeline-card">
+          <span class="pill pill--muted">2025 - 2029</span>
+          <h3>Bachelor of Technology (B.Tech)</h3>
+          <p class="timeline-card__field">Electronics and Communication Engineering (ECE)</p>
+          <p class="timeline-card__place">Vel Tech Rangarajan Dr. Sagunthala R&amp;D Institute of Science and Technology, Chennai</p>
+          <span class="pill pill--accent">&#127942; CGPA: 9.95</span>
+        </div>
+      </div>
+
+      <div class="timeline__item timeline__item--right reveal">
+        <div class="timeline__dot"></div>
+        <div class="timeline-card">
+          <span class="pill pill--muted">2023 - 2025</span>
+          <h3>Intermediate (Class 11 &amp; 12)</h3>
+          <p class="timeline-card__field">MPC</p>
+          <p class="timeline-card__place">Viswasai Junior College</p>
+          <span class="pill pill--accent">&#127942; Percentage: 95%</span>
+        </div>
+      </div>
+
+      <div class="timeline__item timeline__item--left reveal">
+        <div class="timeline__dot"></div>
+        <div class="timeline-card">
+          <span class="pill pill--muted">2022 - 2023</span>
+          <h3>SSC (Class 10)</h3>
+          <p class="timeline-card__field">Secondary School Certificate</p>
+          <p class="timeline-card__place">Ratnam High School</p>
+          <span class="pill pill--accent">&#127942; Percentage: 90%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="section" id="skills">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">[03] Skills</span>
+      <h2 class="section__title">Skills That Drive <span class="gradient-text">Innovation</span></h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-card__head">
+          <span class="skill-card__icon">&#60;/&#62;</span>
+          <h3>Programming Languages</h3>
+          <span class="skill-card__num">01</span>
+        </div>
+        <div class="tag-cloud">
+          <span class="tag">C Programming</span>
+          <span class="tag">Data Structures</span>
+        </div>
+      </div>
+
+      <div class="skill-card skill-card--highlight reveal">
+        <div class="skill-card__head">
+          <span class="skill-card__icon">&#127760;</span>
+          <h3>Web Development</h3>
+          <span class="skill-card__num">02</span>
+        </div>
+        <div class="tag-cloud">
+          <span class="tag">Frontend: React &amp; Next.js</span>
+          <span class="tag">Styling: Tailwind CSS</span>
+          <span class="tag">Backend: Node.js</span>
+          <span class="tag">Database: SQL</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card__head">
+          <span class="skill-card__icon">&#128295;</span>
+          <h3>Tools &amp; Platforms</h3>
+          <span class="skill-card__num">03</span>
+        </div>
+        <div class="tag-cloud">
+          <span class="tag">GitHub</span>
+          <span class="tag">LinkedIn</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card__head">
+          <span class="skill-card__icon">&#128101;</span>
+          <h3>Soft Skills</h3>
+          <span class="skill-card__num">04</span>
+        </div>
+        <div class="tag-cloud">
+          <span class="tag">Analytical Thinking</span>
+          <span class="tag">Problem Solving</span>
+          <span class="tag">Team Collaboration</span>
+          <span class="tag">Continuous Learning</span>
+          <span class="tag">Project Management</span>
+          <span class="tag">Critical Thinking</span>
+          <span class="tag">Innovation &amp; Creativity</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">[04] Projects</span>
+      <h2 class="section__title">Things I've <span class="gradient-text">Built</span></h2>
+      <p class="section__subtitle">A couple of things I've been building recently.</p>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card reveal">
+        <div class="project-card__media project-card__media--alarm">
+          <span class="status-badge status-badge--done">Completed &middot; Developer</span>
+          <span class="project-card__media-icon">&#9200;</span>
+        </div>
+        <div class="project-card__body">
+          <h3>Smart Alarm Assistant</h3>
+          <p class="project-card__tagline">Intelligent productivity &amp; wellness assistant for students.</p>
+          <p class="project-card__desc">
+            An intelligent productivity and wellness assistant designed for students. Combines smart alarms,
+            study planning, sleep tracking, exam reminders, and voice assistance to help users manage their
+            daily routines efficiently and improve academic performance.
+          </p>
+
+          <span class="micro-label">Features</span>
+          <ul class="feature-list">
+            <li>Smart Alarm System</li>
+            <li>Auto Alarm Stop (15 Seconds)</li>
+            <li>Study Planner &amp; Task Manager</li>
+            <li>Exam Countdown Tracker</li>
+            <li>Sleep Quality Analysis</li>
+            <li>Voice Assistant Support</li>
+            <li>Daily Motivation Generator</li>
+            <li>Progress Tracking Dashboard</li>
+          </ul>
+
+          <span class="micro-label">Tech Stack</span>
+          <div class="tag-cloud">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Git &amp; GitHub</span>
+          </div>
+
+          <div class="project-card__links">
+            <a href="#" class="link-btn link-btn--ghost">&#128187; Code</a>
+            <a href="#" class="link-btn">&#128279; Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-card__media project-card__media--echoguard">
+          <span class="status-badge status-badge--dev">Under Active Development</span>
+          <span class="project-card__media-icon">&#128737;&#65039;</span>
+        </div>
+        <div class="project-card__body">
+          <h3>EchoGuard AI</h3>
+          <p class="project-card__tagline">AI-powered emergency safety web app.</p>
+          <p class="project-card__desc">
+            Instead of relying only on a manual SOS button, EchoGuard AI is designed to detect possible
+            emergency situations through voice-based signals and intelligent decision-making.
+          </p>
+
+          <span class="micro-label">Features</span>
+          <ul class="feature-list">
+            <li>Detects distress words like 'Help Me' and 'SOS'</li>
+            <li>Detects loud screams and distress voices</li>
+            <li>Calculates a Danger Score to reduce false alarms</li>
+            <li>Starts a smart SOS countdown with an 'I'm Safe' option</li>
+            <li>Retrieves the user's live GPS location</li>
+            <li>Opens Google Maps with the current location</li>
+            <li>Prepares an emergency SOS message for a family contact</li>
+            <li>Maintains alert history and emergency contact information</li>
+          </ul>
+
+          <span class="micro-label">Tech Stack</span>
+          <div class="tag-cloud">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Geolocation API</span>
+            <span class="tag">Web Speech API</span>
+            <span class="tag">Local Storage</span>
+            <span class="tag">Google Maps Integration</span>
+          </div>
+
+          <div class="project-card__links">
+            <a href="#" class="link-btn link-btn--ghost">&#128187; Code</a>
+            <a href="#" class="link-btn">&#128279; Live Demo</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">[05] Services</span>
+      <h2 class="section__title">How I Can <span class="gradient-text">Help</span></h2>
+      <p class="section__subtitle">Placeholder services — edit these to match what you actually offer.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="service-card__icon">&#127760;</span>
+        <h3>Web Development</h3>
+        <p>Building responsive, modern websites and web apps with React, Next.js and Tailwind CSS.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-card__icon">&#128268;</span>
+        <h3>IoT Prototyping</h3>
+        <p>Designing and building embedded/IoT prototypes for real-world sensing and automation problems.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-card__icon">&#129302;</span>
+        <h3>AI &amp; ML Basics</h3>
+        <p>Applying foundational AI/ML concepts to small projects, data analysis and automation tasks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACHIEVEMENTS ===== -->
+<section class="section" id="achievements">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">[06] Achievements</span>
+      <h2 class="section__title">A Journey of <span class="gradient-text">Continuous Learning</span></h2>
+    </div>
+
+    <div class="achievements-grid">
+      <div class="achievement-card reveal">
+        <div class="achievement-card__top">
+          <span class="achievement-card__icon">&#127942;</span>
+          <span class="achievement-card__year">2026</span>
+        </div>
+        <h3>Fundamentals of Artificial Intelligence</h3>
+        <p class="achievement-card__issuer">Wadhwani Foundation</p>
+        <div class="tag-cloud">
+          <span class="tag">Artificial Intelligence</span>
+          <span class="tag">AI Fundamentals</span>
+          <span class="tag">Self-Learning</span>
+        </div>
+        <a href="https://linkedin.com/in/haseena-shaik-a554093b8" target="_blank" rel="noopener" class="link-btn link-btn--full">in View on LinkedIn</a>
+      </div>
+
+      <div class="achievement-card reveal">
+        <div class="achievement-card__top">
+          <span class="achievement-card__icon">&#127942;</span>
+          <span class="achievement-card__year">2026</span>
+        </div>
+        <h3>Basics of Electronics &amp; Programming</h3>
+        <p class="achievement-card__issuer">Infosys Springboard</p>
+        <div class="tag-cloud">
+          <span class="tag">Electronics</span>
+          <span class="tag">Programming Basics</span>
+        </div>
+        <a href="https://linkedin.com/in/haseena-shaik-a554093b8" target="_blank" rel="noopener" class="link-btn link-btn--full">in View on LinkedIn</a>
+      </div>
+
+      <div class="achievement-card reveal">
+        <div class="achievement-card__top">
+          <span class="achievement-card__icon">&#127942;</span>
+          <span class="achievement-card__year">2025</span>
+        </div>
+        <h3>Campus Ambassador</h3>
+        <p class="achievement-card__issuer">RINEX</p>
+        <div class="tag-cloud">
+          <span class="tag">Leadership</span>
+          <span class="tag">Communication</span>
+          <span class="tag">Student Outreach</span>
+        </div>
+        <a href="https://linkedin.com/in/haseena-shaik-a554093b8" target="_blank" rel="noopener" class="link-btn link-btn--full">in View on LinkedIn</a>
+      </div>
+
+      <div class="achievement-card reveal">
+        <div class="achievement-card__top">
+          <span class="achievement-card__icon">&#127942;</span>
+          <span class="achievement-card__year">2026</span>
+        </div>
+        <h3>Basic Learning Practice</h3>
+        <p class="achievement-card__issuer">Infosys Springboard</p>
+        <div class="tag-cloud">
+          <span class="tag">Foundational Skills</span>
+          <span class="tag">Professional Development</span>
+        </div>
+        <a href="https://linkedin.com/in/haseena-shaik-a554093b8" target="_blank" rel="noopener" class="link-btn link-btn--full">in View on LinkedIn</a>
+      </div>
+
+      <div class="achievement-card reveal">
+        <div class="achievement-card__top">
+          <span class="achievement-card__icon">&#127942;</span>
+          <span class="achievement-card__year">2026</span>
+        </div>
+        <h3>Data Structures and Algorithms</h3>
+        <p class="achievement-card__issuer">Infosys Springboard</p>
+        <div class="tag-cloud">
+          <span class="tag">Data Structures</span>
+          <span class="tag">Algorithms</span>
+          <span class="tag">Problem Solving</span>
+        </div>
+        <a href="https://linkedin.com/in/haseena-shaik-a554093b8" target="_blank" rel="noopener" class="link-btn link-btn--full">in View on LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="eyebrow">[07] Contact</span>
+      <h2 class="section__title">Get In <span class="gradient-text">Touch</span></h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <p class="contact-info__intro">
+          Open to internships, project collaborations and innovative student projects.
+          Reach out through any of the channels below.
+        </p>
+
+        <a href="mailto:shaikhaseena91542@gmail.com" class="contact-row">
+          <span class="contact-row__icon">&#9993;</span>
+          <div>
+            <span class="tiny-label">Email</span>
+            <strong>shaikhaseena91542@gmail.com</strong>
+          </div>
+        </a>
+
+        <a href="tel:+919154255955" class="contact-row">
+          <span class="contact-row__icon">&#128222;</span>
+          <div>
+            <span class="tiny-label">Phone</span>
+            <strong>+91 9154255955</strong>
+          </div>
+        </a>
+
+        <div class="contact-row">
+          <span class="contact-row__icon">&#128205;</span>
+          <div>
+            <span class="tiny-label">Location</span>
+            <strong>Andhra Pradesh, India</strong>
+          </div>
+        </div>
+
+        <a href="https://github.com/shaikhaseena91542-pixel" target="_blank" rel="noopener" class="contact-row">
+          <span class="contact-row__icon">&#128187;</span>
+          <div>
+            <span class="tiny-label">GitHub</span>
+            <strong>github.com/shaikhaseena91542-pixel</strong>
+          </div>
+        </a>
+
+        <a href="https://linkedin.com/in/haseena-shaik-a554093b8" target="_blank" rel="noopener" class="contact-row">
+          <span class="contact-row__icon">in</span>
+          <div>
+            <span class="tiny-label">LinkedIn</span>
+            <strong>linkedin.com/in/haseena-shaik-a554093b8</strong>
+          </div>
+        </a>
+      </div>
+
+      <form class="contact-form reveal" id="contact-form">
+        <label class="field">
+          <span class="tiny-label">Your Name</span>
+          <input type="text" name="name" placeholder="Jane Doe" required>
+        </label>
+        <label class="field">
+          <span class="tiny-label">Email</span>
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label class="field">
+          <span class="tiny-label">Subject</span>
+          <input type="text" name="subject" placeholder="Project Inquiry">
+        </label>
+        <label class="field">
+          <span class="tiny-label">Message</span>
+          <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+        </label>
+        <button type="submit" class="btn btn--primary btn--pill btn--full">
+          <span aria-hidden="true">&#10148;</span> Send Message
+        </button>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>&copy; <span id="year"></span> Shaik Haseena. All rights reserved.</span>
+    <a href="#home" class="back-to-top">Back to top &uarr;</a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
