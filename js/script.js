@@ -75,7 +75,7 @@ function typeLoop() {
 
 typeLoop();
 
-// ===== Contact form (submits to Formspree) =====
+// ===== Contact form (submits to /api/contact, which calls Resend) =====
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
 const submitBtn = form.querySelector('button[type="submit"]');
@@ -90,19 +90,19 @@ form.addEventListener('submit', async (e) => {
   status.textContent = 'Sending your message...';
 
   try {
+    const payload = Object.fromEntries(new FormData(form).entries());
     const response = await fetch(form.action, {
       method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new FormData(form)
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
     });
+    const result = await response.json().catch(() => ({}));
 
-    if (response.ok) {
+    if (response.ok && result.ok) {
       status.textContent = `Thanks ${name}! Your message has been sent — I'll get back to you soon.`;
       form.reset();
     } else {
-      const result = await response.json().catch(() => ({}));
-      const message = result.errors ? result.errors.map(er => er.message).join(', ') : 'Something went wrong.';
-      throw new Error(message);
+      throw new Error(result.error || 'Something went wrong.');
     }
   } catch (err) {
     status.style.color = '#f87171';
