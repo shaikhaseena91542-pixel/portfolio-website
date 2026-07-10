@@ -75,7 +75,7 @@ function typeLoop() {
 
 typeLoop();
 
-// ===== Contact form (submits to Web3Forms) =====
+// ===== Contact form (submits to Formspree) =====
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
 const submitBtn = form.querySelector('button[type="submit"]');
@@ -95,13 +95,14 @@ form.addEventListener('submit', async (e) => {
       headers: { 'Accept': 'application/json' },
       body: new FormData(form)
     });
-    const result = await response.json();
 
-    if (response.ok && result.success) {
+    if (response.ok) {
       status.textContent = `Thanks ${name}! Your message has been sent — I'll get back to you soon.`;
       form.reset();
     } else {
-      throw new Error(result.message || 'Something went wrong.');
+      const result = await response.json().catch(() => ({}));
+      const message = result.errors ? result.errors.map(er => er.message).join(', ') : 'Something went wrong.';
+      throw new Error(message);
     }
   } catch (err) {
     status.style.color = '#f87171';
