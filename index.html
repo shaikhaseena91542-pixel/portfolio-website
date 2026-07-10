@@ -599,7 +599,10 @@
         </a>
       </div>
 
-      <form class="contact-form reveal" id="contact-form">
+      <form class="contact-form reveal" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="5b95baff-9c24-42f9-9eae-b26866f29637">
+        <input type="checkbox" name="botcheck" class="hidden-field" style="display:none">
+
         <label class="field">
           <span class="tiny-label">Your Name</span>
           <input type="text" name="name" placeholder="Jane Doe" required>

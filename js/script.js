@@ -75,16 +75,40 @@ function typeLoop() {
 
 typeLoop();
 
-// ===== Contact form (client-side only placeholder) =====
+// ===== Contact form (submits to Web3Forms) =====
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
+const submitBtn = form.querySelector('button[type="submit"]');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const name = form.name.value.trim();
   if (!name) return;
-  status.textContent = `Thanks ${name}! This form isn't wired to a backend yet — email me directly for now.`;
-  form.reset();
+
+  submitBtn.disabled = true;
+  status.style.color = '';
+  status.textContent = 'Sending your message...';
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    });
+    const result = await response.json();
+
+    if (response.ok && result.success) {
+      status.textContent = `Thanks ${name}! Your message has been sent — I'll get back to you soon.`;
+      form.reset();
+    } else {
+      throw new Error(result.message || 'Something went wrong.');
+    }
+  } catch (err) {
+    status.style.color = '#f87171';
+    status.textContent = 'Sorry, something went wrong sending your message. Please email me directly instead.';
+  } finally {
+    submitBtn.disabled = false;
+  }
 });
 
 // ===== Footer year =====
