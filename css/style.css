@@ -746,6 +746,27 @@ input, textarea { font: inherit; }
 }
 .back-to-top { color: var(--blue); font-weight: 600; }
 
+/* ============ LINK TOAST (missing project link notice) ============ */
+.link-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 32px;
+  transform: translate(-50%, 20px);
+  background: rgba(10, 16, 32, 0.95);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 999;
+  box-shadow: 0 10px 30px rgba(2, 8, 20, 0.4);
+}
+.link-toast.is-visible { opacity: 1; transform: translate(-50%, 0); }
+
 /* ============ SCROLL REVEAL ============ */
 .reveal {
   opacity: 0;

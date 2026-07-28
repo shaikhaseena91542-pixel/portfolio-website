@@ -114,3 +114,40 @@ form.addEventListener('submit', async (e) => {
 
 // ===== Footer year =====
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// ===== Project card links (Code / View Demo) =====
+(function initProjectLinks() {
+  const toast = document.createElement('div');
+  toast.className = 'link-toast';
+  toast.setAttribute('role', 'status');
+  document.body.appendChild(toast);
+
+  let toastTimer;
+  function showToast(message) {
+    toast.textContent = message;
+    toast.classList.add('is-visible');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 2500);
+  }
+
+  document.querySelectorAll('.project-card__links a[data-code-url], .project-card__links a[data-demo-url]').forEach(link => {
+    const url = (link.dataset.codeUrl ?? link.dataset.demoUrl ?? '').trim();
+
+    if (url) {
+      link.href = url;
+    } else {
+      link.href = '#';
+      link.setAttribute('aria-disabled', 'true');
+    }
+
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (url) {
+        window.open(url, '_blank', 'noopener,noreferrer');
+      } else {
+        showToast('Project link will be added soon.');
+      }
+    });
+  });
+})();
